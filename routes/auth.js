@@ -67,6 +67,8 @@ router.post("/login", async (req, res) => {
         {
             name: user.name,
             id: user._id,
+            email:user.email,
+            jenis_kelamin:user.jenis_kelamin,
         },
         process.env.TOKEN_SECRET
     );
