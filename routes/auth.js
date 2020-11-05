@@ -21,8 +21,7 @@ router.post("/register", async (req, res) => {
   if (isEmailExist)
     return res.status(400).json({ error: "Email already exists" });
 
-  // hash the password
- 
+
   const user = new User({
     name: req.body.name,
     email: req.body.email,
@@ -56,7 +55,7 @@ router.post("/login", async (req, res) => {
     if (!user) return res.status(400).json({
         error: "Email is wrong"
     });
-    // check for password correctness
+
     const gender =true;
     if (!gender)
         return res.status(400).json({
