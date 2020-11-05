@@ -4,9 +4,9 @@ router.get("/", (req, res) => {
     error: null,
     data: {
       title: "Welcome!",
-      user: req.body.name,
-      email:req.body.email,
-      jenis_kelamin:req.body.jenis_kelamin
+      user: req.user.name,
+      email:req.user.email,
+      jenis_kelamin:req.user.jenis_kelamin,
     },
   });
 });
